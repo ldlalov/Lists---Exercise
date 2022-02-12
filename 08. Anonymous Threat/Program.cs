@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace _08._Anonymous_Threat
 {
@@ -29,17 +30,16 @@ namespace _08._Anonymous_Threat
                     {
                         continue;
                     }
-
-                    string mergetCell = "";
+                    StringBuilder mergetCell = new StringBuilder();
                     for (int i = param1; i <= param2; i++)
                     {
-                        mergetCell += input[i];
+                        mergetCell.Append(input[i]);
                     }
                     for (int i = param2; i >= param1; i--)
                     {
                         input.RemoveAt(i);
                     }
-                    input.Insert(param1, mergetCell);
+                    input.Insert(param1, mergetCell.ToString());
                 }    
                 
                 if (command[0] == "divide")

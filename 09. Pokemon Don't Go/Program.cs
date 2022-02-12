@@ -15,10 +15,14 @@ namespace _09._Pokemon_Don_t_Go
             {
                 sum += pokemons[index];
                 int temp = pokemons[index];
-                if (pokemons.Count==0)
-                {
-                    break;
-                }
+                //if (index<0)
+                //{
+                //    pokemons[pokemons.Count - 1] = pokemons[0];
+                //}
+                //else if (index>pokemons.Count-1)
+                //{
+                //    pokemons[0] = pokemons.Count;
+                //}
                 for (int i = 0; i < pokemons.Count; i++)
                 {
                     if (pokemons[i] <= temp)
@@ -31,7 +35,6 @@ namespace _09._Pokemon_Don_t_Go
                     }
                 }
                 pokemons.RemoveAt(index);
-                index = int.Parse(Console.ReadLine());
             }
             Console.WriteLine(sum);
         }
